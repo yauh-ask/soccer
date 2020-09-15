@@ -3,6 +3,7 @@
 config.py
 README
 README.txt
+.env
 
 # Distribution / packaging
 .Python
