@@ -27,6 +27,6 @@ jobs:
         python ./setup.py install
     - name: Test with unittest
       env:
-        super_secret: ${{ secrets.SOCCER_CLI_API_TOKEN }}
+        SOCCER_CLI_API_TOKEN: ${{ secrets.SOCCER_CLI_API_TOKEN }}
       run: |
         python -m unittest discover tests
