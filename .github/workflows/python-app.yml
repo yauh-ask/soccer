@@ -20,8 +20,6 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: 2.7
-        name: webpack artifacts
-        path: public/
       
     - name: Install dependencies
       run: |
@@ -31,6 +29,10 @@ jobs:
         
           
     - name: Test with unittest
+      uses: actions/checkout@v2
+      with:
+        name: my-artifact
+        path: path/to/artifact
       env:
         SOCCER_CLI_API_TOKEN: ${{ secrets.SOCCER_CLI_API_TOKEN }}
       run: |
