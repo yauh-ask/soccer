@@ -89,10 +89,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       
-      - name: Download built artifact
-        uses: actions/download-artifact@master
-        with:
-          name: soccer-cli_artifacts
+      # - name: Download built artifact
+      #   uses: actions/download-artifact@master
+      #   with:
+      #     name: soccer-cli_artifacts
 
       - name: Build container image
         uses: docker/build-push-action@v1
