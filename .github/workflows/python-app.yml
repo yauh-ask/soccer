@@ -37,7 +37,7 @@ jobs:
         uses: actions/upload-artifact@master
         with:
           name: soccer-cli_artifacts
-          path: public/
+          path: ./
 
   test:
 
@@ -54,7 +54,7 @@ jobs:
         uses: actions/download-artifact@master
         with:
           name: soccer-cli_artifacts
-          path: public
+          path: ./
 
       - name: Set up Python 2.7
         uses: actions/setup-python@v2
@@ -92,7 +92,7 @@ jobs:
         uses: actions/download-artifact@master
         with:
           name: soccer-cli_artifacts
-          path: public
+          path: ./
 
       - name: Build container image
         uses: docker/build-push-action@v1
