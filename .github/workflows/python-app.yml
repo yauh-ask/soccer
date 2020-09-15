@@ -17,7 +17,7 @@ jobs:
 
     steps:
     
-      - name: Chackout repo's code
+      - name: Checkout repo's code
         uses: actions/checkout@v2
 
       - name: Set up Python 2.7
@@ -47,14 +47,14 @@ jobs:
 
     steps:
 
-      - name: Chackout repo's code
+      - name: Checkout repo's code
         uses: actions/checkout@v2
 
       - name: Download Atrifacts
         uses: actions/download-artifact@master
         with:
           name: soccer-cli_artifacts
-          path: ./
+          path: .
 
       - name: Set up Python 2.7
         uses: actions/setup-python@v2
@@ -86,13 +86,13 @@ jobs:
     steps:
 
       - name: Checkout
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
       
       - name: Download built artifact
         uses: actions/download-artifact@master
         with:
           name: soccer-cli_artifacts
-          path: ./
+          path: .
 
       - name: Build container image
         uses: docker/build-push-action@v1
